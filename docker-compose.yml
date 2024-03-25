@@ -1,0 +1,42 @@
+version: "3.9"
+services:
+ mono:
+  image: mono:latest
+  container_name: Mono1
+  ports:
+   - "8080:8080"
+  volumes:
+   - /Users/aasrija/Documents/cmpt436/cmpt436A3:/code
+  stdin_open: true
+  tty: true
+ java1:
+  image: openjdk:latest
+  container_name: Java1
+  ports:
+   - "8081:80"
+  command: ["bin/bash"]
+  volumes:
+   - /Users/aasrija/Documents/cmpt436/cmpt436A3:/code
+  stdin_open: true
+  tty: true
+ java2:
+  image: openjdk:latest
+  container_name: Java2
+  ports:
+   - "8082:80"
+  command: ["bin/bash"]
+  volumes:
+   - /Users/aasrija/Documents/cmpt436/cmpt436A3:/code
+  stdin_open: true
+  tty: true
+ java3:
+  image: openjdk:latest
+  container_name: Java3
+  ports:
+   - "8083:80"
+  command: ["bin/bash"]
+  volumes:
+   - /Users/aasrija/Documents/cmpt436/cmpt436A3:/code
+  stdin_open: true
+  tty: true
+ 
